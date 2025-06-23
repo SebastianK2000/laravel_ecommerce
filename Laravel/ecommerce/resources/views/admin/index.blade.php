@@ -1,22 +1,28 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    @include('admin.css')
 </head>
 <body>
+    @include('admin.header')
+    @include('admin.sidebar')
 
-<h1>ADMIN</h1>
-
-<!-- Authentication -->
-<form method="POST" action="{{ route('logout') }}">
-    @csrf
-
-    <input type="submit" value="Logout">
-</form>
-
+    <!-- Sidebar Navigation end-->
+    <div class="page-content">
+        <div class="page-header">
+            <div class="container-fluid">
+                @include('admin.body')
+            </div>
+    </div>
+</div>
+<!-- JavaScript files-->
+<script src="{{asset('admincss/vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('admincss/vendor/popper.js/umd/popper.min.js')}}"> </script>
+<script src="{{asset('admincss/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('admincss/vendor/jquery.cookie/jquery.cookie.js')}}"> </script>
+<script src="{{asset('admincss/vendor/chart.js/Chart.min.js')}}"></script>
+<script src="{{asset('admincss/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
+<script src="{{asset('admincss/js/charts-home.js')}}"></script>
+<script src="{{asset('admincss/js/front.js')}}"></script>
 </body>
 </html>
